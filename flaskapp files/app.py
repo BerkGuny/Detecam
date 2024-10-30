@@ -39,7 +39,7 @@ def run_inference(image_path):
     }
 
     # Roboflow model endpoint for 'cam-person-avpuh/1'
-    url = 'https://detect.roboflow.com/cam-person-avpuh/1?api_key=QHtqjXPOLXWBrVOWdJMS'
+    url = ' '
     # Send post request to Roboflow
     response = requests.post(url, headers=headers, files=files)
     predictions = response.json()['predictions']
@@ -66,7 +66,7 @@ def run_inference(image_path):
     return "Detection complete", processed_image_path, new_image_name
 
 def upload_to_blob(image_path, new_filename):
-    connection_string = 'BlobEndpoint=https://storageelectron.blob.core.windows.net/;QueueEndpoint=https://storageelectron.queue.core.windows.net/;FileEndpoint=https://storageelectron.file.core.windows.net/;TableEndpoint=https://storageelectron.table.core.windows.net/;SharedAccessSignature=sv=2022-11-02&ss=bfqt&srt=sco&sp=rwdlacupiytfx&se=2024-07-15T19:43:17Z&st=2024-04-22T11:43:17Z&sip=0.0.0.0-255.255.255.255&spr=https,http&sig=iU4k48Ycug1dgq78obhNUyMkbMiJ7O2pFl8%2BX58A2NM%3D'
+    connection_string = ' '
     blob_service_client = BlobServiceClient.from_connection_string(connection_string)
     blob_client = blob_service_client.get_blob_client(container='processedelectron', blob=new_filename)
     with open(image_path, 'rb') as data:
