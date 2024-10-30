@@ -1,5 +1,5 @@
 # Detecam
-Cloud-Based Camera System Supported by Artificial Intelligence
+Cloud-Based Camera System Supported with Artificial Intelligence Support
 # Project Overview
 Detecam is a cloud-based camera system enhanced with artificial intelligence to provide real-time object detection and analysis. This project utilizes machine learning models deployed in the cloud to process camera feeds efficiently and accurately.
 
@@ -16,3 +16,6 @@ OpenCV: For image and video processing.
 TensorFlow / PyTorch: Core deep learning frameworks for training and deploying models.
 Flask / FastAPI: Back-end framework to handle API requests.
 AWS / Azure Cloud: For hosting the model and processing data in the cloud.
+
+# Link
+https://drive.google.com/file/d/1PPpwwArYmLzo2gWa5hF-_Hw_t3c3-vV7/view?usp=sharing
