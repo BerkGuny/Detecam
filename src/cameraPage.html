@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kamera Görüntüsü</title>
+    <link rel="stylesheet" href="cameraPage.css">
+</head>
+<body>
+    <div class="container">
+        <div class="camera-feed" id="camera-container">
+            <img id="camera-image" alt="Kamera Görüntüsü">
+            <div id="images-container"></div>  
+            <div class="controls">
+                <button id="stop-frame">Stop</button>
+                <button id="continue-frame" style="display:none;">Continue</button>
+                <button id="zoom-in">Zoom In</button>
+                <button id="zoom-out">Zoom Out</button>
+                <button id="sharpen">Sharpen</button>
+                <button id="detect" class="detect-button">Detect</button>
+            </div>
+        </div>
+        <div id="fps-counter">FPS: </div>
+    </div>
+
+    <!-- Sidebar for detected classes and options -->
+    <div id="sidebar" class="sidebar">
+        <h2 id="sidebar-title">Detected Classes</h2>
+        <div id="sidebar-content"></div>
+        <button id="close-sidebar">Close</button>
+    </div>
+
+    <script src="cameraPage.js"></script>
+</body>
+</html>

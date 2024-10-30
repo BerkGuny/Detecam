@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Electron App</title>
+    <link rel="stylesheet" href="index.css"> <!-- CSS dosyanızın yolu -->
+</head>
+<body>
+    <div class="login-container">
+        <h1>Welcome to My Electron App!</h1>
+        <input type="password" id="password" placeholder="Enter password">
+        <button id="connect">Connect</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const connectButton = document.getElementById('connect');
+            connectButton.addEventListener('click', () => {
+                const password = document.getElementById('password').value;
+                window.api.authenticate(password).then(isAuthenticated => {
+                    if (isAuthenticated) {
+                        window.api.navigateToCameraPage(); // Doğrulama başarılı ise kamera sayfasına yönlendir
+                    } else {
+                        alert('Login failed!'); // Doğrulama başarısız ise kullanıcıya bildir
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

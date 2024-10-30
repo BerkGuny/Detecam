@@ -1,0 +1,144 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.camera-feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.controls button {
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+#camera-image {
+    max-width: 100%;
+    height: auto;
+}
+
+#fps-counter {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.detect-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.detect-button:hover {
+    background-color: #45a049;
+}
+
+/* Sidebar styles */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar h2 {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar h2:hover {
+    color: #f1f1f1;
+}
+
+.sidebar #sidebar-content {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar button {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    background: none;
+    border: none;
+    color: #818181;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    color: #f1f1f1;
+}
+
+.class-name {
+    cursor: pointer;
+    color: #818181;
+}
+
+.class-name:hover {
+    color: #f1f1f1;
+}
+
+.class-option {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #333;
+    border: 1px solid #444;
+    cursor: pointer;
+}
+
+.class-option:hover {
+    background-color: #444;
+}
+
+.color-option {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.color-option:hover {
+    text-decoration: underline;
+}
